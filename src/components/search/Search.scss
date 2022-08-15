@@ -1,0 +1,21 @@
+.searchBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  justify-content: center;
+  margin: 30px;
+  max-height: 500px;
+  max-width: 100%;
+}
+
+.loadConatiner {
+  width: 300px;
+  height: 200px;
+}
