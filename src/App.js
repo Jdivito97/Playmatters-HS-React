@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
-import SearchBar from './components/search/Searchbar';
+import Search from './components/search/Search';
+import { LocationContextProvider } from './services/location/location.context';
 
 function App({ moduleData }) {
   console.log(
@@ -9,7 +10,9 @@ function App({ moduleData }) {
   );
   return (
     <div className="cms-react-boilerplate__container">
-      <SearchBar />
+      <LocationContextProvider>
+        <Search />
+      </LocationContextProvider>
     </div>
   );
 }

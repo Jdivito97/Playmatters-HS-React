@@ -9,10 +9,15 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
   justify-content: center;
   margin: 30px;
   max-height: 500px;
   max-width: 100%;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .loadConatiner {

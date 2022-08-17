@@ -2,8 +2,9 @@ import React from 'react';
 import './ResultsCard.scss';
 import PaginationArea from '../pagination/Pagination';
 
-const ResultsCard = (groups) => {
-  const { key, name, locName, suburb, address, city, desc } = groups;
+const ResultsCard = (splitGroups) => {
+  const { key, name, locName, suburb, address, city, desc, state, postCode } =
+    splitGroups;
 
   return (
     <>
@@ -11,8 +12,12 @@ const ResultsCard = (groups) => {
         <h1>{name}</h1>
         <h2>{locName}</h2>
         <h3>{suburb}</h3>
-        <p>{address}</p>
-        <p>{city}</p>
+        <p>
+          {address},{city}
+        </p>
+        <p>
+          {state}, {postCode}
+        </p>
         <h4>{desc}</h4>
       </div>
     </>
