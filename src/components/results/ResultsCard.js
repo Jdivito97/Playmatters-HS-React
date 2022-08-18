@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ResultsCard.scss';
-import PaginationArea from '../pagination/Pagination';
 
 const ResultsCard = (splitGroups) => {
-  const { key, name, locName, suburb, address, city, desc, state, postCode } =
-    splitGroups;
+  const {
+    key,
+    name,
+    locName,
+    suburb,
+    groupSearchTerm = '',
+    address,
+    city,
+    desc,
+    state,
+    postCode,
+  } = splitGroups;
+
+  // filter results based on search input
+  // useEffect(() => {}, [groupSearchTerm]);
 
   return (
     <>
